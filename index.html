@@ -1,0 +1,71 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+</head>
+<body>
+    <h1>Weather Prediction Form</h1>
+
+    <form action="/submit" method="post">
+        <label for="Temperature">Temperature:</label>
+        <input type="text" id="Temperature" name="Temperature" required><br>
+
+        <label for="Humidity">Humidity:</label>
+        <input type="text" id="Humidity" name="Humidity" required><br>
+
+        <label for="Wind_Speed">Wind Speed:</label>
+        <input type="text" id="Wind_Speed" name="Wind_Speed" required><br>
+
+        <label for="Precipitation">Precipitation (%):</label>
+        <input type="text" id="Precipitation" name="Precipitation" required><br>
+
+        <label for="Cloud_Cover">Cloud Cover:</label>
+        <select id="Cloud_Cover" name="Cloud_Cover" required>
+            <option value="0">clear</option>
+            <option value="1">overcast</option>
+            <option value="2">partly cloudy</option>
+        </select><br>
+
+        <label for="Atmospheric_Pressure">Atmospheric Pressure:</label>
+        <input type="text" id="Atmospheric_Pressure" name="Atmospheric_Pressure" required><br>
+
+        <label for="UV_Index">UV Index:</label>
+        <input type="text" id="UV_Index" name="UV_Index" required><br>
+
+        <label for="Season">Season:</label>
+        <select id="Season" name="Season" required>
+            <option value="0">Autumn</option>
+            <option value="1">Spring</option>
+            <option value="2">Summer</option>
+            <option value="3">Winter</option>
+        </select><br>
+
+        <label for="Visibility_KM">Visibility (km):</label>
+        <input type="text" id="Visibility_KM" name="Visibility_KM" required><br>
+
+        <label for="Location">Location:</label>
+        <select id="Location" name="Location" required>
+            <option value="0">coastal</option>
+            <option value="1">inland</option>
+            <option value="2">mountain</option>
+        </select><br>
+
+        <label for="Weather_Severity_Score">Weather Severity Score:</label>
+        <input type="text" id="Weather_Severity_Score" name="Weather_Severity_Score" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+
+
+
+
+
